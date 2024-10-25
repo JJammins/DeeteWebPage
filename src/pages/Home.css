@@ -1,0 +1,76 @@
+.home-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .home-page h1 {
+    color: #3b2f2f; /* 헤더 색상 */
+  }
+
+  
+  .featured {
+    display: flex;
+    justify-content: space-between; /* 카드 사이 여백 균일하게 */
+    gap: 20px;
+    flex-wrap: wrap; /* 화면이 좁을 때 줄바꿈을 허용 */
+  }
+  
+  .item {
+    flex: 1;
+    min-width: 200px; /* 최소 크기 설정 */
+    max-width: 30%; /* 카드가 기본적으로 30% 너비로 설정 */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .recommend-image {
+    border-radius: 8px;
+    width: 100%; /* 이미지는 아이템 내부에서 꽉 차도록 */
+  }
+  
+  .cta {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* 반응형 스타일 */
+  /* 화면 너비가 768px 이하일 때 */
+  @media (max-width: 768px) {
+    .featured {
+      flex-direction: column; /* 모바일에서는 카드가 세로로 배치 */
+      align-items: center; /* 가운데 정렬 */
+    }
+  
+    .item {
+      max-width: 100%; /* 모바일에서 카드가 전체 너비를 차지 */
+    }
+  }
+  
+  /* 화면 너비가 480px 이하일 때 */
+  @media (max-width: 480px) {
+    .home-page h1 {
+      font-size: 24px; /* 헤더 크기 조정 */
+    }
+  
+    .home-page p {
+      font-size: 14px; /* 본문 글자 크기 축소 */
+    }
+  
+    .cta {
+      padding: 15px; /* 패딩을 줄여 모바일에서 더 보기 좋게 */
+    }
+  
+    .recommend-image {
+      width: 100%; /* 이미지가 화면 너비에 맞게 설정 */
+    }
+  }
+  
